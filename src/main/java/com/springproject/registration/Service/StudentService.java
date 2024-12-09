@@ -10,7 +10,6 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 import java.util.Optional;
 
-
 @Service
 @RequiredArgsConstructor
 public class StudentService  {
@@ -28,7 +27,7 @@ public class StudentService  {
     }
 
     public Optional<Student> getStudentById(String id){
-        
+
         return studentRepository.findById(id);
     }
 
