@@ -24,11 +24,13 @@ public class StudentService {
         return studentRepository.findAll();
     }
 
-    public Optional<Student> getStudentById(String id){
+    public Optional<Student> getStudentById(String id) {
         return studentRepository.findById(id);
     }
 
-
+    public Student getStudentByEmail(String email){
+        return studentRepository.findByEmail(email);
+    }
 
 
 }
