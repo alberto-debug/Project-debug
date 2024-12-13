@@ -35,4 +35,14 @@ public class StudentController {
                 .map(ResponseEntity::ok)
                 .orElse(ResponseEntity.notFound().build());
     }
+
+    @GetMapping("/email{email}")
+    public ResponseEntity<Student> getStudentByEmail(@PathVariable String email){
+        Student student = studentService.getStudentByEmail(email);
+        return student != null ?
+                ResponseEntity.ok(student) :
+                ResponseEntity.notFound().build();
+    }
+
+    
 }
