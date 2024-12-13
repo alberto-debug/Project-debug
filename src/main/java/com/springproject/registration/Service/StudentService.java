@@ -5,6 +5,7 @@ import com.springproject.registration.repository.StudentRepository;
 
 import lombok.RequiredArgsConstructor;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -14,6 +15,7 @@ import java.util.Optional;
 @RequiredArgsConstructor
 public class StudentService {
 
+    @Autowired
     private StudentRepository studentRepository;
 
     public Student registerStudent(Student student) {
